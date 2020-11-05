@@ -45,7 +45,7 @@ class HashMap {
 
   _findSlot(key) {
       const hash = HashMap._hashString(key);
-      const start = hash % this._capacity;
+      const start = hash % this._capacity; // capacity:24, slots:0-23, 25,49 mod-> 1
 
       for (let i=start; i<start + this._capacity; i++) {
           const index = i % this._capacity;
